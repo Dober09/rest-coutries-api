@@ -9,6 +9,7 @@ function App() {
     <main>
       <Header/>
     <SearchBar />
+    <br />
     < Card/>
   <br />
     < Card/>
