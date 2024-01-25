@@ -2,15 +2,23 @@ import Header from "./Header";
 import "./App.css"
 import CardDetail from "./CardDetail";
 import { data } from "./data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Content from "./Content";
 const App = () => {
 
+  const [data,setData] = useState([])
   const [country,setCountry] = useState('')
   const [region,setRegion] = useState('')
   const [countryData,setCountryData] = useState([])
   const [isDetail,setIsDetail] = useState(false)
   const [iscolorChange,setIsColorChange] = useState(true) 
+  const ENDPOINT = "https://restcountries.com/v3.1/all"
+
+  useEffect(()=>{
+    fetch(ENDPOINT)
+    .then(response=>response.json())
+    .then(deta=>setData(deta))
+  },[isDetail])
 
   const handleClick = (name)=>{
     setIsDetail(!isDetail)
