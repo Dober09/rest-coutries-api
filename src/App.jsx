@@ -27,6 +27,8 @@ const App = () => {
     setCountryData(countryDetail)
     
   }
+
+  console.log(data)
   
   const handleBackgroundChange = ()=>{
     if(iscolorChange){

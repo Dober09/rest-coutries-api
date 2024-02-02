@@ -16,7 +16,7 @@ const CardDetail = ({handleClick,countryData}) =>{
             <div className="wrapper">
                 <h3>{place.name.common}</h3>
                 <div className="section one">
-                    <p>Native Name: <span>{place.name.nativeName.common}</span></p>
+                    <p>Native Name: <span>{place.name.nativeName.official}</span></p>
                     <p>Population: <span>{place.population}</span></p>
                     <p>Region:<span>{place.region}</span></p>
                     <p>Sub Region: <span>{place.subregion}</span></p>
